@@ -1,0 +1,93 @@
+Procedure Pseudocode:
+
+
+
+APPEND:
+
+Open output.txt;
+IF(output.txt does not exist)
+	return 0;
+Writre message to output.txt;
+close document;
+return 1;
+
+
+-----------------------------------------------------
+
+SEARCH:
+
+Open output.txt;
+IF(output.txt does not exist)
+	return NULL;
+FOR(each sentence in output.txt)
+	IF(sentence contains query)
+		return sentence;
+	
+return NULL;
+
+-------------------------------------------------------
+
+FIND:
+
+Open output.txt;
+IF(output.txt does not exist)
+	return 0;
+i=0;
+FOR(each sentence in output.txt)
+	IF(i==index)
+		return sentence;
+	i++;
+------------------------------------------------------------------
+
+COUNT:
+
+Open output.txt
+IF(output.txt does not exist)
+	return -1;
+occur=0;
+FOR(each sentence containing query in output.txt)
+	occur++;
+	
+return occur;
+
+---------------------------------------------------------------
+
+REMOVE:
+
+counter=0;
+line= index of sentence to be removed;
+IF(sentence does not exist)
+	return error message;
+
+open output.txt
+IF(output.txt does not exist)
+	return NULL;
+create new document "new_output.txt"
+FOR(each sentence in output.txt)
+	IF(counter!=line)
+		write sentence to new_output.txt;
+		counter++;
+		IF(counter!=NULL)
+			write "." to new_output.txt;
+delete output.txt
+rename new_output.txt to "output.txt";
+return "removed sentence"
+
+---------------------------------------------------------
+
+DELETE:
+
+open output.txt
+IF(output.txt does not exist)
+	return NULL;
+create new document "new_output.txt"
+FOR(each sentence in output.txt)
+	IF(sentence contains query)
+		delete query from sentence;
+		write sentence to new_output.txt;
+		IF(sentence is not the last)
+			write " " to new_output.txt;
+delete output.txt
+rename new_output.txt to "output.txt";
+return "deleted the word";
+	
